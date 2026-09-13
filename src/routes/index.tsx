@@ -6,7 +6,7 @@ import {
   Mail, MapPin, Menu, Phone, Send, Sparkles, Target, Terminal, Trophy, X,
 } from "lucide-react";
 
-import coreImage from "@/assets/tanmai-data-core.png";
+import coreImage from "@/assets/tanmai-data-core-clean.png";
 import { Button } from "@/components/ui/button";
 import {
   Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger,
