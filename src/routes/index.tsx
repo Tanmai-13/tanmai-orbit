@@ -84,7 +84,22 @@ function Portfolio() {
 
   useEffect(() => {
     const timer = window.setInterval(() => setRoleIndex((current) => (current + 1) % roles.length), 2200);
-    return () => window.clearInterval(timer);
+    const sections = document.querySelectorAll("main section");
+    sections.forEach((section) => section.classList.add("reveal-section"));
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          observer.unobserve(entry.target);
+        }
+      }),
+      { threshold: 0.08 },
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => {
+      window.clearInterval(timer);
+      observer.disconnect();
+    };
   }, []);
 
   function moveCore(event: MouseEvent<HTMLDivElement>) {
