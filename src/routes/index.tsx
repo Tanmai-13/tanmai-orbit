@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 
 import coreImage from "@/assets/tanmai-data-core-clean.png";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { Button } from "@/components/ui/button";
 import {
   Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger,
