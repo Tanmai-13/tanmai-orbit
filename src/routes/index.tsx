@@ -146,7 +146,7 @@ function Portfolio() {
           <p className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">I build projects, strengthen my programming skills, and continuously learn to become a better software developer.</p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild size="lg"><a href="#projects">View Projects <ArrowDownRight /></a></Button>
-            <Dialog><DialogTrigger asChild><Button variant="outline" size="lg">Download Resume <ArrowDownRight /></Button></DialogTrigger><DialogContent className="glass-panel"><DialogHeader><DialogTitle>Resume coming soon</DialogTitle><DialogDescription className="leading-6">A resume file has not been provided yet. In the meantime, this portfolio contains Tanmai's verified education, projects, skills, certifications, and contact details.</DialogDescription></DialogHeader></DialogContent></Dialog>
+            <Button asChild variant="outline" size="lg"><a href={resumeAsset.url} download="Thirumuru_Tanmai_Resume.pdf" target="_blank" rel="noreferrer">Download Resume <ArrowDownRight /></a></Button>
             <Button asChild variant="ghost" size="lg"><a href="#contact">Contact Me <ChevronRight /></a></Button>
           </div>
           <div className="mt-10 flex items-center gap-3">
